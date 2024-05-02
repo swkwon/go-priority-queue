@@ -1,11 +1,3 @@
-# go-priority-queue
- go-priority-queue는 우선순위가 빠른 요소를 먼저 pop 할 수 있도록 구현한 thread safety한 generic 알고리즘입니다.
-# 패키지 설치
-```
-$ go get github.com/swkwon/go-priority-queue@latest
-```
-# 시작하기
-```
 package main
 
 import (
@@ -51,5 +43,3 @@ func main() {
 		log.Println(v)
 	}
 }
-```
-`MakePriorityQueue`로 큐에 들어갈 요소의 타입과 우선순위 결정방식을 지정합니다. `Low`는 우선순위의 값이 작을 수록 `High`는 우선순위의 값이 클 수록 먼저 큐로 부터 나오게 됩니다.
