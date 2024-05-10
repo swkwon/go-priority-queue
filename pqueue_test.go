@@ -6,7 +6,7 @@ import (
 )
 
 func TestPriorityQueue(t *testing.T) {
-	q := MakePriorityQueue[int](Low)
+	q := New[int](Low)
 	q.Push(10, 10)
 	q.Push(4, 4)
 	q.Push(11, 11)
@@ -27,7 +27,7 @@ func TestPriorityQueue(t *testing.T) {
 		Age  int
 	}
 
-	q2 := MakePriorityQueue[*Person](High)
+	q2 := New[*Person](High)
 	q2.Push(&Person{Name: "Alice", Age: 20}, 20)
 	q2.Push(&Person{Name: "Edward", Age: 10}, 10)
 	q2.Push(&Person{Name: "Jessica", Age: 14}, 14)

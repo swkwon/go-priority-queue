@@ -16,7 +16,7 @@ import (
 
 func main() {
 	log.Println("first example")
-	q1 := pqueue.MakePriorityQueue[int](pqueue.Low)
+	q1 := pqueue.New[int](pqueue.Low)
 	q1.Push(1, 1)
 	q1.Push(10, 10)
 	q1.Push(2, 2)
@@ -34,7 +34,7 @@ func main() {
 	}
 
 	log.Println("second example")
-	q2 := pqueue.MakePriorityQueue[int](pqueue.High)
+	q2 := pqueue.New[int](pqueue.High)
 	q2.Push(1, 1)
 	q2.Push(10, 10)
 	q2.Push(2, 2)
@@ -52,4 +52,4 @@ func main() {
 	}
 }
 ```
-`MakePriorityQueue`로 큐에 들어갈 요소의 타입과 우선순위 결정방식을 지정합니다. `Low`는 우선순위의 값이 작을 수록 `High`는 우선순위의 값이 클 수록 먼저 큐로 부터 나오게 됩니다.
+`New`로 큐에 들어갈 요소의 타입과 우선순위 결정방식을 지정합니다. `Low`는 우선순위의 값이 작을 수록 `High`는 우선순위의 값이 클 수록 먼저 큐로 부터 나오게 됩니다.

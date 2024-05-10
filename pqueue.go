@@ -33,7 +33,7 @@ type PQueue[T any] struct {
 	order    OrderBy
 }
 
-func MakePriorityQueue[T any](popOrder OrderBy) *PQueue[T] {
+func New[T any](popOrder OrderBy) *PQueue[T] {
 	return &PQueue[T]{
 		mutex: &sync.Mutex{},
 		order: popOrder,

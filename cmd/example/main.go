@@ -8,7 +8,7 @@ import (
 
 func main() {
 	log.Println("first example")
-	q1 := pqueue.MakePriorityQueue[int](pqueue.Low)
+	q1 := pqueue.New[int](pqueue.Low)
 	q1.Push(1, 1)
 	q1.Push(10, 10)
 	q1.Push(2, 2)
@@ -26,7 +26,7 @@ func main() {
 	}
 
 	log.Println("second example")
-	q2 := pqueue.MakePriorityQueue[int](pqueue.High)
+	q2 := pqueue.New[int](pqueue.High)
 	q2.Push(1, 1)
 	q2.Push(10, 10)
 	q2.Push(2, 2)
